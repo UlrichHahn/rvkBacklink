@@ -1,7 +1,6 @@
 <?php
 
 $ch = curl_init();
-$targeturl="https://ub.hsu-hh.de/rvko_simple/mynot.php?".$_SERVER['QUERY_STRING'];
 $targeturl="https://rvk.uni-regensburg.de/rvko_simple/mynot.php?".$_SERVER['QUERY_STRING'];
 
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);

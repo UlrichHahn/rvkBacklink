@@ -36,7 +36,7 @@ function catLink(rvk,catId){
     var anchor = document.createElement("a");
     anchor.href=cat["url"] + rvk;
     anchor.target="_blank";
-    anchor.innerHTML='<img src="'+cat["icon"]+'" alt="'+cat["alt"]+'" />';
+    anchor.innerHTML='<img class="catLink" src="'+cat["icon"]+'" alt="'+cat["alt"]+'" />';
 
     return anchor;
 }
@@ -61,8 +61,23 @@ jQuery.fn.addLink=function(){
     }
 }
 
+function legende(){
+    var legend=document.createElement("div");
+    legend.id="legende";
+    legend.innerHTML='Nachschlagen der RVK-Systemstellen ergänzt von Ulrich Hahn\
+<p>Systematische Suche ..\
+<ul>\
+<li><img src="'+catalogs["Opc"]["icon"]+'" /> im lokalen Opac</li>\
+<li><img src="'+catalogs["Gvk"]["icon"]+'" /> im Verbundkatalog / Fernleihe</li>\
+<li><img src="'+catalogs["Beluga"]["icon"]+'" /> im Bestand Hamburg / beluga</li>\
+</ul>\
+';
+    return legend;
+}
 
 $(window).load(function(){
 //if(foundRVKO){
     $("td > a[name]").each(function(){$(this).addLink()});
+    $("body").append(legende());
+
 });
