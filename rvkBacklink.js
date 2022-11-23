@@ -27,7 +27,7 @@ var catalogs={
 
     "KatHH":{"icon":"beluga.ico",
         "url":"https://katalog.hamburg/vufind/Search/Results?lookfor=sys+",
-        "alt":"Bibliotheken in Hamburg"
+        "alt":"Bibliotheken in Hamburg, aka beluga"
       }
 };
 
@@ -72,9 +72,9 @@ function legende(){
     legend.innerHTML='Nachschlagen der RVK-Systemstellen ergänzt von Ulrich Hahn\
 <p>Systematische Suche ..\
 <ul>\
-<li><img src="'+catalogs["Opc"]["icon"]+'" alt="Opac"/> im lokalen Opac</li>\
-<li><img src="'+catalogs["Gvk"]["icon"]+'" alt="GVK"/> im Verbundkatalog / Fernleihe</li>\
-<li><img src="'+catalogs["KatHH"]["icon"]+'" alt="Katalog Hamburg"/> im Hamburg Katalog / aka beluga</li>\
+<li><img src="'+catalogs["Opc"]["icon"]+'" alt="'+catalogs["Opc"]["alt"]+'"/> '+catalogs["Opc"]["alt"]+'</li>\
+<li><img src="'+catalogs["Gvk"]["icon"]+'" alt="'+catalogs["Gvk"]["alt"]+'"/> '+catalogs["Gvk"]["alt"]+'</li>\
+<li><img src="'+catalogs["KatHH"]["icon"]+'" alt="'+catalogs["KatHH"]["alt"]+'"/> '+catalogs["KatHH"]["alt"]+'</li>\
 </ul>\
 ';
     return legend;
