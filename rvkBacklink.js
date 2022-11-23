@@ -21,9 +21,14 @@ var catalogs={
 	  },
 
     "Beluga":{"icon":"https://beluga.sub.uni-hamburg.de/vufind/themes/root/images/vufind-favicon.ico",
-	      "url":"https://beluga.sub.uni-hamburg.de/vufind/Search/Results?lookfor=sys+",
-	      "alt":"Bibliotheken in Hamburg"
-	     },
+        "url":"https://beluga.sub.uni-hamburg.de/vufind/Search/Results?lookfor=sys+",
+        "alt":"Bibliotheken in Hamburg"
+      },
+
+    "KatHH":{"icon":"beluga.ico",
+        "url":"https://katalog.hamburg/vufind/Search/Results?lookfor=sys+",
+        "alt":"Bibliotheken in Hamburg"
+      }
 };
 
 function isSingleRvk(rvk){
@@ -53,7 +58,7 @@ jQuery.fn.addLink=function(){
       ){
 	$(this).html(" "+currHtml); // mark our visit
 	// $(this).attr("href",urlOPC(currentRvk));
-	$(this).parent().prepend(catLink(currentRvk,"Beluga"));
+	$(this).parent().prepend(catLink(currentRvk,"KatHH"));
 	$(this).parent().prepend(" ");
 	$(this).parent().prepend(catLink(currentRvk,"Gvk"));
 	$(this).parent().prepend(" ");
@@ -67,9 +72,9 @@ function legende(){
     legend.innerHTML='Nachschlagen der RVK-Systemstellen ergänzt von Ulrich Hahn\
 <p>Systematische Suche ..\
 <ul>\
-<li><img src="'+catalogs["Opc"]["icon"]+'" /> im lokalen Opac</li>\
-<li><img src="'+catalogs["Gvk"]["icon"]+'" /> im Verbundkatalog / Fernleihe</li>\
-<li><img src="'+catalogs["Beluga"]["icon"]+'" /> im Bestand Hamburg / beluga</li>\
+<li><img src="'+catalogs["Opc"]["icon"]+'" alt="Opac"/> im lokalen Opac</li>\
+<li><img src="'+catalogs["Gvk"]["icon"]+'" alt="GVK"/> im Verbundkatalog / Fernleihe</li>\
+<li><img src="'+catalogs["KatHH"]["icon"]+'" alt="Katalog Hamburg"/> im Hamburg Katalog / aka beluga</li>\
 </ul>\
 ';
     return legend;
