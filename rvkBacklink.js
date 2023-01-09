@@ -25,7 +25,7 @@ var catalogs={
         "alt":"Bibliotheken in Hamburg"
       },
 
-    "KatHH":{"icon":"beluga.ico",
+    "KatHH":{"icon":"https://katalog.hamburg/vufind/themes/root/images/vufind-favicon.ico",
         "url":"https://katalog.hamburg/vufind/Search/Results?lookfor=sys+",
         "alt":"Bibliotheken in Hamburg, aka beluga"
       }
