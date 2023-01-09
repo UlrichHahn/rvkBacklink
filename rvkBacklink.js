@@ -13,21 +13,25 @@ var catalogs={
     "Opc":{"icon":"https://ub.hsu-hh.de/img_psi/2.0/favicons//default.ico",
 	   "url":"https://ub.hsu-hh.de/DB=1/CLK?IKT=3000&TRM=",
 	   "alt":"OPAC der HSU Hamburg"
-	  },
+	   "urlfin":""
+      },
 
     "Gvk":{"icon":"https://kxpwww.k10plus.de/images/favicons/default.ico",
 	   "url":"https://kxp.k10plus.de/DB=2.1/CMD?ACT=SRCHA&IKT=3000&TRM=",
 	   "alt":"K10+ Verbund / Fernleihe"
+        "urlfin":""
 	  },
 
     "Beluga":{"icon":"https://beluga.sub.uni-hamburg.de/vufind/themes/root/images/vufind-favicon.ico",
         "url":"https://beluga.sub.uni-hamburg.de/vufind/Search/Results?lookfor=sys+",
         "alt":"Bibliotheken in Hamburg"
+        "urlfin":""
       },
 
     "KatHH":{"icon":"https://katalog.hamburg/vufind/themes/root/images/vufind-favicon.ico",
-        "url":"https://katalog.hamburg/vufind/Search/Results?lookfor=sys+",
-        "alt":"Bibliotheken in Hamburg, aka beluga"
+        "url":"https://katalog.hamburg/vufind/Search/Results?lookfor=",
+        "alt":"Bibliotheken in Hamburg, aka beluga",
+        "urlfin":" rvk"
       }
 };
 
@@ -39,7 +43,7 @@ function isSingleRvk(rvk){
 function catLink(rvk,catId){
     var cat=catalogs[catId];
     var anchor = document.createElement("a");
-    anchor.href=cat["url"] + rvk;
+    anchor.href=cat["url"] + rvk + cat["urlfin"];
     anchor.target="_blank";
     anchor.innerHTML='<img class="catLink" src="'+cat["icon"]+'" alt="'+cat["alt"]+'" />';
 
