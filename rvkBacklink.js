@@ -31,7 +31,7 @@ var catalogs={
     "KatHH":{"icon":"https://katalog.hamburg/vufind/themes/root/images/vufind-favicon.ico",
         "url":"https://katalog.hamburg/vufind/Search/Results?lookfor=",
         "alt":"Bibliotheken in Hamburg, aka beluga",
-        "urlfin":" rvk"
+        "urlfin":" rvk&type=Class"
       }
 };
 
@@ -43,7 +43,7 @@ function isSingleRvk(rvk){
 function catLink(rvk,catId){
     var cat=catalogs[catId];
     var anchor = document.createElement("a");
-    anchor.href=cat["url"] + rvk + cat["urlfin"];
+    anchor.href=encodeURIComponent(cat["url"] + rvk + cat["urlfin"]);
     anchor.target="_blank";
     anchor.innerHTML='<img class="catLink" src="'+cat["icon"]+'" alt="'+cat["alt"]+'" />';
 
