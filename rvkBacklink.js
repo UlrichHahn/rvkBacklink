@@ -43,7 +43,7 @@ function isSingleRvk(rvk){
 function catLink(rvk,catId){
     var cat=catalogs[catId];
     var anchor = document.createElement("a");
-    anchor.href=encodeURIComponent(cat["url"] + rvk + cat["urlfin"]);
+    anchor.href=cat["url"] + encodeURIComponent(rvk) + cat["urlfin"];
     anchor.target="_blank";
     anchor.innerHTML='<img class="catLink" src="'+cat["icon"]+'" alt="'+cat["alt"]+'" />';
 
