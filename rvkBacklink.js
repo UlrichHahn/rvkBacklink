@@ -12,19 +12,19 @@ function foundRVKO(){
 var catalogs={
     "Opc":{"icon":"https://ub.hsu-hh.de/img_psi/2.0/favicons//default.ico",
 	   "url":"https://ub.hsu-hh.de/DB=1/CLK?IKT=3000&TRM=",
-	   "alt":"OPAC der HSU Hamburg"
+	   "alt":"OPAC der HSU Hamburg",
 	   "urlfin":""
       },
 
     "Gvk":{"icon":"https://kxpwww.k10plus.de/images/favicons/default.ico",
 	   "url":"https://kxp.k10plus.de/DB=2.1/CMD?ACT=SRCHA&IKT=3000&TRM=",
-	   "alt":"K10+ Verbund / Fernleihe"
+	   "alt":"K10+ Verbund / Fernleihe",
         "urlfin":""
 	  },
 
     "Beluga":{"icon":"https://beluga.sub.uni-hamburg.de/vufind/themes/root/images/vufind-favicon.ico",
         "url":"https://beluga.sub.uni-hamburg.de/vufind/Search/Results?lookfor=sys+",
-        "alt":"Bibliotheken in Hamburg"
+        "alt":"Bibliotheken in Hamburg",
         "urlfin":""
       },
 
