@@ -73,7 +73,7 @@ jQuery.fn.addLink=function(){
 function legende(){
     var legend=document.createElement("div");
     legend.id="legende";
-    legend.innerHTML='Nachschlagen der RVK-Systemstellen ergänzt von Ulrich Hahn\
+    legend.innerHTML='Verlinken der RVK-Systemstellen ergänzt von Ulrich Hahn, HSU Hamburg\
 <p>Systematische Suche ..\
 <ul>\
 <li><img src="'+catalogs["Opc"]["icon"]+'" alt="'+catalogs["Opc"]["alt"]+'"/> '+catalogs["Opc"]["alt"]+'</li>\
