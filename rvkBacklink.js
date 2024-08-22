@@ -10,6 +10,12 @@ function foundRVKO(){
 }
 
 var catalogs={
+    "hsuC":{"icon":"https://ub.hsu-hh.de/img_psi/2.0/favicons//default.ico",
+	   "url":"https://hamburghsu.gbv.de/search?q=topic(RVK+",
+	   "alt":"HSU Central",
+	   "urlfin":")"
+      },
+
     "Opc":{"icon":"https://ub.hsu-hh.de/img_psi/2.0/favicons//default.ico",
 	   "url":"https://ub.hsu-hh.de/DB=1/CLK?IKT=3000&TRM=",
 	   "alt":"OPAC der HSU Hamburg",
@@ -19,7 +25,7 @@ var catalogs={
     "Gvk":{"icon":"https://kxpwww.k10plus.de/images/favicons/default.ico",
 	   "url":"https://kxp.k10plus.de/DB=2.1/CMD?ACT=SRCHA&IKT=3000&TRM=",
 	   "alt":"K10+ Verbund / Fernleihe",
-        "urlfin":""
+       "urlfin":""
 	  },
 
     "Beluga":{"icon":"https://beluga.sub.uni-hamburg.de/vufind/themes/root/images/vufind-favicon.ico",
@@ -65,6 +71,8 @@ jQuery.fn.addLink=function(){
 	$(this).parent().prepend(catLink(currentRvk,"KatHH"));
 	$(this).parent().prepend(" ");
 	$(this).parent().prepend(catLink(currentRvk,"Gvk"));
+	$(this).parent().prepend(" ");
+	$(this).parent().prepend(catLink(currentRvk,"hsuC"));
 	$(this).parent().prepend(" ");
 	$(this).parent().prepend(catLink(currentRvk,"Opc"));
     }
