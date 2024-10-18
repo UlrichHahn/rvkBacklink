@@ -10,9 +10,9 @@ function foundRVKO(){
 }
 
 var catalogs={
-    "hsuC":{"icon":"https://ub.hsu-hh.de/img_psi/2.0/favicons//default.ico",
+    "hsuC":{"icon":"https://ub.hsu-hh.de/favicon.ico",
 	   "url":"https://hamburghsu.gbv.de/search?q=topic(RVK+",
-	   "alt":"HSU Central",
+	   "alt":"HSU Central - beta",
 	   "urlfin":")"
       },
 
@@ -24,7 +24,7 @@ var catalogs={
 
     "Gvk":{"icon":"https://kxpwww.k10plus.de/images/favicons/default.ico",
 	   "url":"https://kxp.k10plus.de/DB=2.1/CMD?ACT=SRCHA&IKT=3000&TRM=",
-	   "alt":"K10+ Verbund / Fernleihe",
+	   "alt":"GVK Verbundkatalog / Fernleihe",
        "urlfin":""
 	  },
 
@@ -36,7 +36,7 @@ var catalogs={
 
     "KatHH":{"icon":"https://katalog.hamburg/vufind/themes/root/images/vufind-favicon.ico",
         "url":"https://katalog.hamburg/vufind/Search/Results?lookfor=",
-        "alt":"Bibliotheken in Hamburg, aka beluga",
+        "alt":"Katalog Hamburg - Bestände wissenschaftlicher Bibliotheken in Hamburg",
         "urlfin":" rvk&type=Class"
       }
 };
@@ -51,7 +51,7 @@ function catLink(rvk,catId){
     var anchor = document.createElement("a");
     anchor.href=cat["url"] + encodeURIComponent(rvk) + cat["urlfin"];
     anchor.target="_blank";
-    anchor.innerHTML='<img class="catLink" src="'+cat["icon"]+'" alt="'+cat["alt"]+'" />';
+    anchor.innerHTML='<img class="catLink" src="'+cat["icon"]+'" title="'+cat["alt"]+'" />';
 
     return anchor;
 }
@@ -82,9 +82,10 @@ function legende(){
     var legend=document.createElement("div");
     legend.id="legende";
     legend.innerHTML='Verlinken der RVK-Systemstellen ergänzt von Ulrich Hahn, HSU Hamburg\
-<p>Systematische Suche ..\
+<p>Die Icons führen zu Treffern in folgenden Katalogen\
 <ul>\
 <li><img src="'+catalogs["Opc"]["icon"]+'" alt="'+catalogs["Opc"]["alt"]+'"/> '+catalogs["Opc"]["alt"]+'</li>\
+<li><img src="'+catalogs["hsuC"]["icon"]+'" alt="'+catalogs["hsuC"]["alt"]+'"/> '+catalogs["hsuC"]["alt"]+'</li>\
 <li><img src="'+catalogs["Gvk"]["icon"]+'" alt="'+catalogs["Gvk"]["alt"]+'"/> '+catalogs["Gvk"]["alt"]+'</li>\
 <li><img src="'+catalogs["KatHH"]["icon"]+'" alt="'+catalogs["KatHH"]["alt"]+'"/> '+catalogs["KatHH"]["alt"]+'</li>\
 </ul>\
