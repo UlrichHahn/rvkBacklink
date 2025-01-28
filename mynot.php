@@ -1,7 +1,17 @@
 <?php
 
 $ch = curl_init();
-$targeturl="https://rvk.uni-regensburg.de/rvko_simple/mynot.php?".$_SERVER['QUERY_STRING'];
+// in response to verified SQL injection attack
+// the query string is restricted to valid RVK notations / ranges
+$qs="";
+$pattern='/nt_in\=[A-Z0-9\+\-]+$/'; // RVK notation / ranges only
+//$pattern='/.*/'; // uncomment for test against open pattern
+
+if(preg_match($pattern,$_SERVER['QUERY_STRING'])){
+	$qs=$_SERVER['QUERY_STRING'];
+	}
+$targeturl="https://rvk.uni-regensburg.de/rvko_simple/mynot.php?".$qs;
+
 
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 #curl_setopt($ch, CURLOPT_COOKIEJAR, '-');
