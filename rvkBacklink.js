@@ -16,8 +16,8 @@ var catalogs={
 	   "urlfin":")"
       },
 
-    "Opc":{"icon":"https://opac.ub.hsu-hh.de/img_psi/2.0/favicons//default.ico",
-	   "url":"https://opac.ub.hsu-hh.de/DB=1/CLK?IKT=3000&TRM=",
+    "Opc":{"icon":"https://lbshsu.gbv.de/img_psi/2.0/favicons//default.ico",
+	   "url":"https://lbshsu.gbv.de/DB=1/CLK?IKT=3000&TRM=",
 	   "alt":"OPAC der HSU Hamburg",
 	   "urlfin":""
       },
